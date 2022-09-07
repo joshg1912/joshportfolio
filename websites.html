@@ -3,18 +3,18 @@
     <head></head>
     <body>
         <div>
-            <img src="/images/preview.jpg" height="300" width="400">
+            <a href="https://allisoncoaching.com/" target=_blank><img src="/images/preview.jpg" height="300" width="400"></a>
             <p id="demo"></p>
             <p id="description"></p>
         </div>
         <div>
-            <img src="/images/preview2.jpg" height="300" width="400">
+            <a href="https://hamiltonzephyrhawketrialconsulting.com/" target=_blank><img src="/images/preview2.jpg" height="300" width="400"></a>
             <h2 id="title"></h2>
             <p id="description2"></p>
         </div>
         <script>
             
-            fetch('http://api.linkpreview.net/?key=122f8f0f938a496460b41cbd1f4d2879&q=https://https://allisoncoaching.com/').then((response) => response.json()).then(data => {
+            fetch('http://api.linkpreview.net/?key=122f8f0f938a496460b41cbd1f4d2879&q=https://allisoncoaching.com/').then((response) => response.json()).then(data => {
                 console.log(data);
                 displayData(data);
             });
@@ -26,7 +26,7 @@
                 document.getElementById("description").innerHTML = description;
             }
 
-            fetch('http://api.linkpreview.net/?key=122f8f0f938a496460b41cbd1f4d2879&q=https://https://hamiltonzephyrhawketrialconsulting.com/').then((response) => response.json()).then(data => {
+            fetch('http://api.linkpreview.net/?key=122f8f0f938a496460b41cbd1f4d2879&q=https://hamiltonzephyrhawketrialconsulting.com/').then((response) => response.json()).then(data => {
               console.log(data);
               secondCall(data);
             });
