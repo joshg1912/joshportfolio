@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <div class="container">
+            <img src="/images/preview.jpg" height="300" width="400">
+            <p id="demo"></p>
+            <p id="description"></p>
+        </div>
+        <div>
+            <img src="/images/preview2.jpg" height="300" width="400">
+            <p id="favicon"></p>
+            <h2 id="title"></h2>
+            <p id="description2"></p>
+        </div>
+        <script>
+            
+            fetch('http://api.linkpreview.net/?key=122f8f0f938a496460b41cbd1f4d2879&q=https://https://allisoncoaching.com/').then((response)=> response.json()).then(data => {
+                console.log(data);
+                displayData(data);
+            });
+            function displayData(data) {
+                const title = data.title;
+                console.log(title);
+                const description = data.description;
+                document.getElementById("demo").innerHTML = title;
+                document.getElementById("description").innerHTML = description;
+            }
+
+            fetch('http://api.linkpreview.net/?key=122f8f0f938a496460b41cbd1f4d2879&q=https://https://hamiltonzephyrhawketrialconsulting.com/').then((response) => response.json()).then(data => {
+              console.log(data);
+              secondCall(data);
+            });
+            function secondCall(data) {
+                const title2 = data.title;
+                console.log(title2);
+                const description2 = data.description;
+
+                document.getElementById("title").innerHTML = title2;
+                
+                /*const photo = document.createElement("img");
+                photo.src = img;
+                var src = document.getElementById("favicon");
+                src.appendChild(photo);*/
+
+                document.getElementById("description2").innerHTML = description2;
+
+            }
+  
+
+
+        </script>
+    </body>
+</html>
