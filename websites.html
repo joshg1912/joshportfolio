@@ -8,9 +8,14 @@
             <p id="site-description"></p>
         </div>
         <div>
-            <a href="https://hamiltonzephyrhawketrialconsulting.com/" target=_blank><img src="images/preview2.jpg" height="300" width="400"></a>
+            <a href="https://davidsmithrealtor.com/" target=_blank><img src="images/preview2.jpg" height="300" width="400"></a>
             <h2 id="title"></h2>
             <p id="description2"></p>
+        </div>
+        <div>
+            <a href="https://9049960699.com/" target=_blank><img src="images/preview3.jpg" height="300" width="400"></a>
+            <h2 id="title3"></h2>
+            <p id="description3"></p>
         </div>
         <script>
             
@@ -26,7 +31,7 @@
                 document.getElementById("site-description").innerHTML = description;
             }
 
-            fetch('https://api.linkpreview.net/?key=122f8f0f938a496460b41cbd1f4d2879&q=https://hamiltonzephyrhawketrialconsulting.com/').then((response) => response.json()).then(data => {
+            fetch('https://api.linkpreview.net/?key=122f8f0f938a496460b41cbd1f4d2879&q=https://davidsmithrealtor.com/').then((response) => response.json()).then(data => {
               console.log(data);
               secondCall(data);
             });
@@ -37,6 +42,20 @@
 
                 document.getElementById("title").innerHTML = title2;
                 document.getElementById("description2").innerHTML = description2;
+
+            }
+
+            fetch('https://api.linkpreview.net/?key=122f8f0f938a496460b41cbd1f4d2879&q=https://9049960699.com/').then((response) => response.json()).then(data => {
+              console.log(data);
+              secondCall(data);
+            });
+            function secondCall(data) {
+                const title3 = data.title;
+                console.log(title3);
+                const description3 = data.description;
+
+                document.getElementById("title3").innerHTML = title3;
+                document.getElementById("description3").innerHTML = description3;
 
             }
 
