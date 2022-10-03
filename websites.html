@@ -3,8 +3,13 @@
     <head>
         <style>
             .container {
-                display:grid;
-                grid-template-columns: 1fr 1fr 1fr;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+                justify-content: center;
+            }
+            .column-1, .column-2, .column-3, .column-4, .column-5, .column-6 {
+                text-align: center;
+                padding:5%;
             }
         </style>
 
@@ -26,9 +31,24 @@
             <h2 id="title3"></h2>
             <p id="description3"></p>
         </div>
+        <div class="column-4">
+            <a href="https://robinsondetective.com/" target=_blank><img src="images/preview5.jpg" height="300" width="400"></a>
+            <h2 id="title4"></h2>
+            <p id="description4"></p>
+        </div>
+        <div class="column-5">
+            <a href="https://stephanieshouse2home.com/" target=_blank><img src="images/preview7.jpg" height="300" width="400"></a>
+            <h2 id="title5"></h2>
+            <p id="description5"></p>
+        </div>
+        <div class="column-6">
+            <a href="https://clearwaterbeachjetski.com/" target=_blank><img src="images/preview8.jpg" height="300" width="400"></a>
+            <h2 id="title6"></h2>
+            <p id="description6"></p>
+        </div>
         </div>
         <script>
-           /*
+           
             fetch('https://api.linkpreview.net/?key=122f8f0f938a496460b41cbd1f4d2879&q=https://allisoncoaching.com/').then((response) => response.json()).then(data => {
                 console.log(data);
                 displayData(data);
@@ -67,7 +87,45 @@
                 document.getElementById("title3").innerHTML = title3;
                 document.getElementById("description3").innerHTML = siteDescription;
             }
-            */
+            
+            fetch('https://api.linkpreview.net/?key=122f8f0f938a496460b41cbd1f4d2879&q=https://robinsondetective.com/').then((response) => response.json()).then(data => {
+              console.log(data);
+              fourthCall(data);
+            });
+            function fourthCall(data) {
+                const title4 = data.title;
+                console.log(title4);
+                const siteDescription2 = data.description;
+
+                document.getElementById("title4").innerHTML = title4;
+                document.getElementById("description4").innerHTML = siteDescription2;
+            }
+            fetch('https://api.linkpreview.net/?key=122f8f0f938a496460b41cbd1f4d2879&q=https://stephanieshouse2home.com/').then((response) => response.json()).then(data => {
+              console.log(data);
+              fifthCall(data);
+            });
+            function fifthCall(data) {
+                const title5 = data.title;
+                console.log(title5);
+                const siteDescription3 = data.description;
+
+                document.getElementById("title5").innerHTML = title5;
+                document.getElementById("description5").innerHTML = siteDescription3;
+            }
+             fetch('https://api.linkpreview.net/?key=122f8f0f938a496460b41cbd1f4d2879&q=https://clearwaterbeachjetski.com/').then((response) => response.json()).then(data => {
+              console.log(data);
+              sixthCall(data);
+            });
+            function sixthCall(data) {
+                const title6 = data.title;
+                console.log(title6);
+                const siteDescription4 = data.description;
+
+                document.getElementById("title6").innerHTML = title6;
+                document.getElementById("description6").innerHTML = siteDescription4;
+            }
+        
+    
         </script>
     </body>
 </html>
