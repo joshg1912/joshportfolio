@@ -25,7 +25,6 @@
                 document.getElementById("demo").innerHTML = title;
                 document.getElementById("site-description").innerHTML = description;
             }
-            displayData();
 
             fetch('http://api.linkpreview.net/?key=122f8f0f938a496460b41cbd1f4d2879&q=https://hamiltonzephyrhawketrialconsulting.com/').then((response) => response.json()).then(data => {
               console.log(data);
@@ -40,7 +39,6 @@
                 document.getElementById("description2").innerHTML = description2;
 
             }
-            secondCall();
 
 
         </script>
