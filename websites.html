@@ -2,6 +2,19 @@
 <html>
     <head>
         <style>
+
+            .banner {
+                min-height: 35vh;
+                text-align: center;
+            }
+
+            .hero-content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 300px;
+            }
+
             .container {
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
@@ -11,44 +24,58 @@
                 text-align: center;
                 padding:5%;
             }
+            img {
+                box-shadow:5px 4px 8px #adabab;
+            }
         </style>
 
     </head>
     <body>
+        <div class="banner">
+            <div class="hero-content">
+            <h2>Websites</h2>
+            </div>
+        </div>
         <div class="container">
         <div class="column-1">
-            <a href="https://allisoncoaching.com/" target=_blank><img src="images/preview.jpg" height="300" width="400"></a>
+            <a href="https://allisoncoaching.com/" target=_blank>
+            <img src="images/preview.jpg" height="300" width="500"></a>
             <h2 id="demo"></h2>
             <p id="site-description"></p>
         </div>
         <div class="column-2">
-            <a href="https://davidsmithrealtor.com/" target=_blank><img src="images/preview2.jpg" height="300" width="400"></a>
+            <a href="https://davidsmithrealtor.com/" target=_blank>
+            <img src="images/preview2.jpg" height="300" width="500"></a>
             <h2 id="title"></h2>
             <p id="description2"></p>
         </div>
         <div class="column-3">
-            <a href="https://9049960699.com/" target=_blank><img src="images/preview3.jpg" height="300" width="400"></a>
+            <a href="https://9049960699.com/" target=_blank>
+            <img src="images/preview3.jpg" height="300" width="500"></a>
             <h2 id="title3"></h2>
             <p id="description3"></p>
         </div>
         <div class="column-4">
-            <a href="https://robinsondetective.com/" target=_blank><img src="images/preview5.jpg" height="300" width="400"></a>
+            <a href="https://robinsondetective.com/" target=_blank>
+            <img src="images/preview5.jpg" height="300" width="500"></a>
             <h2 id="title4"></h2>
             <p id="description4"></p>
         </div>
         <div class="column-5">
-            <a href="https://stephanieshouse2home.com/" target=_blank><img src="images/preview7.jpg" height="300" width="400"></a>
+            <a href="https://stephanieshouse2home.com/" target=_blank>
+            <img src="images/preview7.jpg" height="300" width="500"></a>
             <h2 id="title5"></h2>
             <p id="description5"></p>
         </div>
         <div class="column-6">
-            <a href="https://clearwaterbeachjetski.com/" target=_blank><img src="images/preview8.jpg" height="300" width="400"></a>
+            <a href="https://clearwaterbeachjetski.com/" target=_blank>
+            <img src="images/preview8.jpg" height="300" width="500"></a>
             <h2 id="title6"></h2>
             <p id="description6"></p>
         </div>
         </div>
         <script>
-           
+           /*
             fetch('https://api.linkpreview.net/?key=122f8f0f938a496460b41cbd1f4d2879&q=https://allisoncoaching.com/').then((response) => response.json()).then(data => {
                 console.log(data);
                 displayData(data);
@@ -124,8 +151,7 @@
                 document.getElementById("title6").innerHTML = title6;
                 document.getElementById("description6").innerHTML = siteDescription4;
             }
-        
-    
+            */
         </script>
     </body>
 </html>
