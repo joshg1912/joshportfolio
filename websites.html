@@ -5,7 +5,7 @@
         <div>
             <a href="https://allisoncoaching.com/" target=_blank><img src="images/preview.jpg" height="300" width="400"></a>
             <h2 id="demo"></h2>
-            <p id="description"></p>
+            <p id="site-description"></p>
         </div>
         <div>
             <a href="https://hamiltonzephyrhawketrialconsulting.com/" target=_blank><img src="images/preview2.jpg" height="300" width="400"></a>
@@ -23,7 +23,7 @@
                 console.log(title);
                 const description = data.description;
                 document.getElementById("demo").innerHTML = title;
-                document.getElementById("description").innerHTML = description;
+                document.getElementById("site-description").innerHTML = description;
             }
 
             fetch('http://api.linkpreview.net/?key=122f8f0f938a496460b41cbd1f4d2879&q=https://hamiltonzephyrhawketrialconsulting.com/').then((response) => response.json()).then(data => {
@@ -36,11 +36,6 @@
                 const description2 = data.description;
 
                 document.getElementById("title").innerHTML = title2;
-                
-                /*const photo = document.createElement("img");
-                photo.src = img;
-                var src = document.getElementById("favicon");
-                src.appendChild(photo);*/
                 document.getElementById("description2").innerHTML = description2;
 
             }
