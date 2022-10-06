@@ -2,12 +2,19 @@
 <html>
     <head>
         <style>
+            body {
+                background-image: url("images/bg.jpg");
+                background-size: cover;
+            }
+
+            .hero-text {
+                color:black;
+                font-size: 5vh;
+            }
 
             .banner {
                 min-height: 35vh;
                 text-align: center;
-                background-image: url("images/header-img.jpg");
-                background-size:cover;
             }
 
             .hero-content {
@@ -22,21 +29,26 @@
                 grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
                 justify-content: center;
                 margin-top: 5%;
+                grid-column-gap: 1em;
             }
+
             .column-1, .column-2, .column-3, .column-4, .column-5, .column-6 {
                 text-align: center;
                 padding:5%;
             }
+
             img {
-                box-shadow:5px 4px 8px #adabab;
+                box-shadow:5px 4px 8px #5e5e5e;
             }
+
+          
         </style>
 
     </head>
     <body>
         <div class="banner">
             <div class="hero-content">
-            <h2>Websites</h2>
+            <h1 class="hero-text">Websites</h1>
             </div>
         </div>
         <div class="container">
@@ -45,40 +57,46 @@
             <img src="images/preview.jpg" height="300" width="500"></a>
             <h2 id="demo"></h2>
             <p id="site-description"></p>
+            <button>View Full Website</button>
         </div>
         <div class="column-2">
             <a href="https://davidsmithrealtor.com/" target=_blank>
             <img src="images/preview2.jpg" height="300" width="500"></a>
             <h2 id="title"></h2>
             <p id="description2"></p>
+            <button>View Full Website</button>
         </div>
         <div class="column-3">
             <a href="https://9049960699.com/" target=_blank>
             <img src="images/preview3.jpg" height="300" width="500"></a>
             <h2 id="title3"></h2>
             <p id="description3"></p>
+            <button>View Full Website</button>
         </div>
         <div class="column-4">
             <a href="https://robinsondetective.com/" target=_blank>
             <img src="images/preview5.jpg" height="300" width="500"></a>
             <h2 id="title4"></h2>
             <p id="description4"></p>
+            <button>View Full Website</button>
         </div>
         <div class="column-5">
             <a href="https://stephanieshouse2home.com/" target=_blank>
             <img src="images/preview7.jpg" height="300" width="500"></a>
             <h2 id="title5"></h2>
             <p id="description5"></p>
+            <button>View Full Website</button>
         </div>
         <div class="column-6">
             <a href="https://clearwaterbeachjetski.com/" target=_blank>
             <img src="images/preview8.jpg" height="300" width="500"></a>
             <h2 id="title6"></h2>
             <p id="description6"></p>
+            <button>View Full Website</button>
         </div>
         </div>
         <script>
-           
+           /*
             fetch('https://api.linkpreview.net/?key=122f8f0f938a496460b41cbd1f4d2879&q=https://allisoncoaching.com/').then((response) => response.json()).then(data => {
                 console.log(data);
                 displayData(data);
@@ -154,7 +172,7 @@
                 document.getElementById("title6").innerHTML = title6;
                 document.getElementById("description6").innerHTML = siteDescription4;
             }
-            
+            */
         </script>
     </body>
 </html>
